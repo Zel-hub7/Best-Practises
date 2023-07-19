@@ -123,9 +123,10 @@ function createListItem(task) {
   });
 }
 
-for (let i = 0; i < tasks.length; i += 1) {
-  createListItem(tasks[i]);
-}
+tasks.forEach(function(task) {
+  createListItem(task);
+});
+
 
 clearButton.addEventListener('click', () => {
   const filteredItems = tasks.filter((el) => !el.completed);
